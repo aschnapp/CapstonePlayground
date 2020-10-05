@@ -1,9 +1,9 @@
 from flask import Flask
+from flask_cors import CORS
 
-server = Flask(__name__)
+app = Flask(__name__)
+CORS(app)
 
-print("heerrre")
-
-@server.route('/')
+@app.route('/api', methods=['GET'])
 def index():
     return 'Hello, World!'

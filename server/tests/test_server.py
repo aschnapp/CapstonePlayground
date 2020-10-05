@@ -13,5 +13,5 @@ def client():
 
 
 def graph(client, slope, y_intercept):
-    response = client.get('/')
+    response = client.get('/api')
     assert b"Hello, World!" in response.data
